@@ -31,7 +31,7 @@
 
 ### Containers
 * Tickets (use as example)
-* TransactionPanel 
+* TransactionPanel
 * TopNav
 * TasksPanel
 * Comments
@@ -40,6 +40,7 @@
 
 
 ### Fix
-* In App.js remove the props parameter and all instances of passing props 
+* In App.js remove the props parameter and all instances of passing props
 * In index.js remove all instances of state and passing props to App
 
+Leslie Robertson

@@ -1,8 +1,9 @@
 import React from "react";
 import DateTime from "./DateTime";
+import { connect } from "react-redux";
 
 function MessagePreview(props) {
-  return (    
+  return (
     <li className="message-preview">
       <a href="#">
         <div className="media">
@@ -21,4 +22,11 @@ function MessagePreview(props) {
   );
 }
 
-export default MessagePreview;
+function mapStateToProps(state) {
+  return {
+    message: state.messages
+  };
+}
+
+const MessagePreviewContainer = connect(mapStateToProps)(MessagePreview);
+export default MessagePreviewContainer;
