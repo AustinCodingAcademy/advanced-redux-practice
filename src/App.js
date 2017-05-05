@@ -1,6 +1,5 @@
 import React from "react";
 import TopNav from "./components/TopNav";
-import PropTypes from "prop-types";
 import AreaChart from "./components/AreaChart";
 import Comments from "./components/Comments";
 import DonutChart from "./components/DonutChart";
@@ -11,13 +10,12 @@ import TasksPanel from "./components/TasksPanel";
 import Tickets from "./components/Tickets";
 import TransactionsPanel from "./components/TransactionsPanel";
 
-
-function App(props) {
+function App() {
   return (
     <div> 
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <TopNav messages={props.messages} />
+          <TopNav />
           <SideNav />
         </nav>
         <div id="page-wrapper">
@@ -35,19 +33,19 @@ function App(props) {
               </div>
             </div>
             <div className="row">
-              <Comments newComments={props.newComments} />
-              <Tasks newTasks={props.newTasks} />
-              <Orders newOrders={props.newOrders} />
-              <Tickets tickets={props.tickets} />
+              <Comments />
+              <Tasks />
+              <Orders />
+              <Tickets />
             </div>
             <AreaChart />
             <div className="row">
               <DonutChart />
               <div className="col-lg-4">
-                <TasksPanel tasks={props.tasks} />
+                <TasksPanel />
               </div>
               <div className="col-lg-4">
-                <TransactionsPanel orders={props.orders} />
+                <TransactionsPanel />
               </div>
             </div>
           </div>
@@ -57,17 +55,5 @@ function App(props) {
 
   );
 }
-
-App.propTypes = {
-  dateTime: PropTypes.string.isRequired,
-  newComments: PropTypes.number.isRequired,
-  newTasks: PropTypes.number.isRequired,
-  newOrders: PropTypes.number.isRequired,
-  tickets: PropTypes.number.isRequired,
-  orders: PropTypes.array.isRequired,
-  taskItem: PropTypes.string.isRequired,
-  messages: PropTypes.array,
-  tasks: PropTypes.array
-};
 
 export default App;
