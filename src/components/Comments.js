@@ -1,7 +1,8 @@
 import React from "react";
+import { connect } from "react-redux";
 
 function Comments(props) {
-  return ( 
+  return (
     <div className="col-lg-3 col-md-6">
       <div className="panel panel-primary">
           <div className="panel-heading">
@@ -26,4 +27,19 @@ function Comments(props) {
     </div>);
 }
 
-export default Comments;
+function mapStateToProps(state){
+  return{
+    // the below key needs to be the same name as the props you require above,
+    // and the value needs to be the state.js files object(s) being
+    // called within the file
+    newComments:state.newComments
+  }
+}
+// calling connect returns a function which is why you can call functions
+// immediately afterward.  Always in that order  OR...for example,
+// this is how it's called:
+
+// const connectedThingFunction = connect(mapStateToProps);
+// const ListOfUsersContainer = connectedThingFunction(ListOfUsers);
+const CommentsContainer = connect(mapStateToProps)(Comments);
+export default CommentsContainer

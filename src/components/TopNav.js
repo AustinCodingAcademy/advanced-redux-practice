@@ -1,5 +1,7 @@
 import React from "react";
 import MessagePreview from "./MessagePreview";
+import { connect } from "react-redux";
+
 
 function TopNav(props) {
   return (
@@ -12,7 +14,7 @@ function TopNav(props) {
                   return <MessagePreview key={i} message={m} />;
                 })
             }
-         
+
           <li className="message-footer">
             <a href="#">Read All New Messages</a>
           </li>
@@ -66,4 +68,19 @@ function TopNav(props) {
     </ul>);
 }
 
-export default TopNav;
+function mapStateToProps(state){
+  return{
+    // the below key needs to be the same name as the props you require above,
+    // and the value needs to be the state.js files object(s) being
+    // called within the file
+    messages:state.messages
+  }
+}
+// calling connect returns a function which is why you can call functions
+// immediately afterward.  Always in that order  OR...for example,
+// this is how it's called:
+
+// const connectedThingFunction = connect(mapStateToProps);
+// const ListOfUsersContainer = connectedThingFunction(ListOfUsers);
+const TopNavContainer = connect(mapStateToProps)(TopNav);
+export default TopNavContainer

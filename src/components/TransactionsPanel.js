@@ -1,8 +1,9 @@
 import React from "react";
 import TransactionRow from "./TransactionRow";
+import { connect } from "react-redux";
 
 function TransactionsPanel(props) {
-  return ( 
+  return (
     <div className="panel panel-default">
         <div className="panel-heading">
             <h3 className="panel-title"><i className="fa fa-money fa-fw"></i> Transactions Panel</h3>
@@ -24,7 +25,7 @@ function TransactionsPanel(props) {
                           return <TransactionRow key={i} order={order} />;
                         })
                       }
-                       
+
                     </tbody>
                 </table>
             </div>
@@ -35,4 +36,19 @@ function TransactionsPanel(props) {
     </div> );
 }
 
-export default TransactionsPanel;
+function mapStateToProps(state){
+  return{
+    // the below key needs to be the same name as the props you require above,
+    // and the value needs to be the state.js files object(s) being
+    // called within the file
+    orders:state.orders
+  }
+}
+// calling connect returns a function which is why you can call functions
+// immediately afterward.  Always in that order  OR...for example,
+// this is how it's called:
+
+// const connectedThingFunction = connect(mapStateToProps);
+// const ListOfUsersContainer = connectedThingFunction(ListOfUsers);
+const TransactionsPanelContainer = connect(mapStateToProps)(TransactionsPanel);
+export default TransactionsPanelContainer
