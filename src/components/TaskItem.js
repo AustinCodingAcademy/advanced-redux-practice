@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from 'react-redux';
 
 function TaskItem(props) {
   return (<a href="#" className="list-group-item">

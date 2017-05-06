@@ -1,6 +1,5 @@
 import React from "react";
 import DateTime from "./DateTime";
-import { connect } from 'react-redux';
 
 function MessagePreview(props) {
   return (    
