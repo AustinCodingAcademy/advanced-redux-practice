@@ -32,7 +32,7 @@ function Tasks(props) {
 //component
 function mapStateToProps(state) {
   return {
-      task:state.newTasks
+      newTasks:state.newTasks
   }
 }
 // the below key needs to be the same name as the props you require above, and the value needs to be the state.js files object/s being  called within the file to display the information.
