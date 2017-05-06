@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 
+//component function
 function Tickets(props) {
   return(
     <div className="col-lg-3 col-md-6">
@@ -26,12 +27,12 @@ function Tickets(props) {
       </div>
     </div>);
 }
+// component
 const mapStateToProps = function (state) {
   return {
     tickets: state.tickets
   };
 };
-export default (Tickets);
-// export default connect(mapStateToProps,null)(Tickets);
-
-
+// the connect element is what is put into the container to display the information
+const ticketsContainer = connect(mapStateToProps)(Tickets);
+export default ticketsContainer

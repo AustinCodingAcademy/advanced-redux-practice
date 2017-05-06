@@ -1,7 +1,8 @@
 import React from "react";
+import {connect} from "react-redux";
 
 function Orders(props) {
-  return ( 
+  return (
     <div className="col-lg-3 col-md-6">
       <div className="panel panel-yellow">
         <div className="panel-heading">
@@ -25,5 +26,12 @@ function Orders(props) {
       </div>
     </div>);
 }
-
-export default Orders;
+//component
+const mapStateToProps = function (state) {
+  return {
+    newOrders: state.newOrders
+  };
+};
+// the connect element is what is put into the container to display the information
+const OrdersContainer = connect(mapStateToProps)(Orders);
+export default OrdersContainer;

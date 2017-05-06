@@ -1,5 +1,7 @@
 import React from "react";
 import TaskItem from "./TaskItem";
+import {connect} from "react-redux";
+
 function TasksPanel(props) {
   return (  <div className="panel panel-default">
                 <div className="panel-heading">
@@ -12,7 +14,7 @@ function TasksPanel(props) {
                           return <TaskItem key={i} task={t} />;
                         })
                       }
-                        
+
                     </div>
                     <div className="text-right">
                         <a href="#">View All Activity <i className="fa fa-arrow-circle-right"></i></a>
@@ -21,5 +23,12 @@ function TasksPanel(props) {
           </div>
         );
 }
-
-export default TasksPanel;
+//component
+function mapStateToProps(state) {
+  return {
+      tasks:state.tasks
+  }
+}
+// the below key needs to be the same name as the props you require above, and the value needs to be the state.js files object/s being  called within the file to display the information.
+const TaskPanelContainer = connect(mapStateToProps)(TasksPanel);
+export default TaskPanelContainer;
