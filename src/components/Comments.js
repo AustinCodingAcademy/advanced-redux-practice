@@ -33,5 +33,5 @@ function mapStateToProps(state){
     }
 }
 
-const ListOfUsersContainer = connect(mapStateToProps)(Comments);
-export default Comments
+const CommentsContainer = connect(mapStateToProps)(Comments);
+export default Comments;

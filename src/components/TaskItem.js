@@ -6,3 +6,5 @@ function TaskItem(props) {
               <i className="fa fa-fw fa-calendar"></i> {props.task.task}
           </a> );
 }
+
+export default TaskItem;

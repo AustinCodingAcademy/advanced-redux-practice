@@ -42,5 +42,5 @@ function mapStateToProps(state){
     }
 }
 
-const ListOfUsersContainer = connect(mapStateToProps)(TransactionsPanel);
-export default TransactionsPanel
+const TransactionsPanelContainer = connect(mapStateToProps)(TransactionsPanel);
+export default TransactionsPanel;

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from 'react';
 import MessagePreview from "./MessagePreview";
 import { connect } from 'react-redux';
 
-function TopNav(props) {
+function TopNav (props) {
   return (
     <ul className="nav navbar-right top-nav">
       <li className="dropdown">
@@ -69,9 +69,10 @@ function TopNav(props) {
 
 function mapStateToProps(state){
     return {
-      messages:state.message
+      messages:state.messages
     }
 }
 
-const ListOfUsersContainer = connect(mapStateToProps)(TopNav);
+const TopNavContainer =
+connect(mapStateToProps)(TopNav);
 export default TopNav

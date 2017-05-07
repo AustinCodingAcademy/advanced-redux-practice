@@ -20,3 +20,5 @@ function MessagePreview(props) {
     </li>
   );
 }
+
+export default MessagePreview;

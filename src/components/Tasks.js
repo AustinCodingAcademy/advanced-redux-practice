@@ -32,5 +32,5 @@ function mapStateToProps(state){
     }
 }
 
-const ListOfUsersContainer = connect(mapStateToProps)(Tasks);
-export default Tasks
+const TasksContainer = connect(mapStateToProps)(Tasks);
+export default Tasks;

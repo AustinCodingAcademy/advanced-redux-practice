@@ -33,5 +33,5 @@ function mapStateToProps(state){
     }
 }
 
-const ListOfUsersContainer = connect(mapStateToProps)(Tickets);
-export default Tickets
+const TicketsContainer = connect(mapStateToProps)(Tickets);
+export default Tickets;

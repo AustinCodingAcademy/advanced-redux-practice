@@ -30,5 +30,5 @@ function mapStateToProps(state){
     }
 }
 
-const ListOfUsersContainer = connect(mapStateToProps)(TasksPanel);
-export default TasksPanel
+const TasksPanelContainer = connect(mapStateToProps)(TasksPanel);
+export default TasksPanel;
