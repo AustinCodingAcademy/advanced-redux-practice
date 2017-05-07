@@ -5,25 +5,29 @@ function SideNav() {
     <div className="collapse navbar-collapse navbar-ex1-collapse">
       <ul className="nav navbar-nav side-nav">
         <li className="active">
-          <a href="index.html"><i className="fa fa-fw fa-dashboard"></i> Dashboard</a>
+          <a href="index.html"><i className="fa fa-fw fa-dashboard" /> Dashboard</a>
         </li>
         <li>
-          <a href="charts.html"><i className="fa fa-fw fa-bar-chart-o"></i> Charts</a>
+          <a href="charts.html"><i className="fa fa-fw fa-bar-chart-o" /> Charts</a>
         </li>
         <li>
-          <a href="tables.html"><i className="fa fa-fw fa-table"></i> Tables</a>
+          <a href="tables.html"><i className="fa fa-fw fa-table" /> Tables</a>
         </li>
         <li>
-          <a href="forms.html"><i className="fa fa-fw fa-edit"></i> Forms</a>
+          <a href="forms.html"><i className="fa fa-fw fa-edit" /> Forms</a>
         </li>
         <li>
-          <a href="bootstrap-elements.html"><i className="fa fa-fw fa-desktop" /> Bootstrap Elements</a>
+          <a href="bootstrap-elements.html">
+            <i className="fa fa-fw fa-desktop" /> Bootstrap Elements
+          </a>
         </li>
         <li>
-          <a href="bootstrap-grid.html"><i className="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
+          <a href="bootstrap-grid.html"><i className="fa fa-fw fa-wrench" /> Bootstrap Grid</a>
         </li>
         <li>
-        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i className="fa fa-fw fa-arrows-v"></i> Dropdown <i className="fa fa-fw fa-caret-down" /></a>
+          <a href="javascript:;" data-toggle="collapse" data-target="#demo">
+            <i className="fa fa-fw fa-arrows-v" /> Dropdown <i className="fa fa-fw fa-caret-down" />
+          </a>
           <ul id="demo" className="collapse">
             <li>
               <a href="#">Dropdown Item</a>
@@ -34,13 +38,13 @@ function SideNav() {
           </ul>
         </li>
         <li>
-            <a href="blank-page.html"><i className="fa fa-fw fa-file"></i> Blank Page</a>
+          <a href="blank-page.html"><i className="fa fa-fw fa-file" /> Blank Page</a>
         </li>
         <li>
-            <a href="index-rtl.html"><i className="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
+          <a href="index-rtl.html"><i className="fa fa-fw fa-dashboard" /> RTL Dashboard</a>
         </li>
       </ul>
-            </div>);
+    </div>);
 }
 
 export default SideNav;

@@ -14,7 +14,7 @@ import TransactionsPanel from "./components/TransactionsPanel";
 
 function App(props) {
   return (
-    <div> 
+    <div>
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
           <TopNav messages={props.messages} />

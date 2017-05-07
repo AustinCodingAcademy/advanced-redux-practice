@@ -8,7 +8,7 @@ function Orders(props) {
         <div className="panel-heading">
           <div className="row">
             <div className="col-xs-3">
-              <i className="fa fa-shopping-cart fa-5x"></i>
+              <i className="fa fa-shopping-cart fa-5x" />
             </div>
             <div className="col-xs-9 text-right">
               <div className="huge">{props.newOrders}</div>
@@ -19,8 +19,8 @@ function Orders(props) {
         <a href="#">
           <div className="panel-footer">
             <span className="pull-left">View Details</span>
-            <span className="pull-right"><i className="fa fa-arrow-circle-right"></i></span>
-            <div className="clearfix"></div>
+            <span className="pull-right"><i className="fa fa-arrow-circle-right" /></span>
+            <div className="clearfix" />
           </div>
         </a>
       </div>
@@ -35,3 +35,4 @@ function mapStateToProps(state) {
 
 const OrdersContainer = connect(mapStateToProps)(Orders);
 export default OrdersContainer;
+// export default Orders;
