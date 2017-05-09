@@ -27,4 +27,11 @@ function Comments(props) {
     </div>);
 }
 
-export default Comments;
+function mapStateToProps(state){
+  return{
+    newComments:state.newComments
+  }
+}
+
+const CommentsContainer = connect(mapStateToProps)(Comments);
+export default CommentsContainer
