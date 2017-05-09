@@ -34,4 +34,4 @@ function mapStateToProps(state){
 }
 
 const OrdersContainer = connect(mapStateToProps)(Orders);
-export default Orders;
+export default OrdersContainer;

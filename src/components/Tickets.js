@@ -34,4 +34,4 @@ function mapStateToProps(state){
 }
 
 const TicketsContainer = connect(mapStateToProps)(Tickets);
-export default Tickets;
+export default TicketsContainer;

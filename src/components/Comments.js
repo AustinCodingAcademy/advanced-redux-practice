@@ -34,4 +34,4 @@ function mapStateToProps(state){
 }
 
 const CommentsContainer = connect(mapStateToProps)(Comments);
-export default Comments;
+export default CommentsContainer;

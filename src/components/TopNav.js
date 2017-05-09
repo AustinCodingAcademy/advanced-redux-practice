@@ -75,4 +75,4 @@ function mapStateToProps(state){
 
 const TopNavContainer =
 connect(mapStateToProps)(TopNav);
-export default TopNav
+export default TopNavContainer

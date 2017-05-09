@@ -33,4 +33,4 @@ function mapStateToProps(state){
 }
 
 const TasksContainer = connect(mapStateToProps)(Tasks);
-export default Tasks;
+export default TasksContainer;
