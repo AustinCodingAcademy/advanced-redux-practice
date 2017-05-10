@@ -4,7 +4,7 @@ import App from "./App";
 import "./index.css";
 import state from "./state";
 import {Provider} from "react-redux";
-import store from "./store.js";
+import store from "./store";
 
 const {
 dateTime,
@@ -30,7 +30,7 @@ ReactDOM.render(
       orders={orders}
       messages={messages}
       tasks={tasks}
-      />,
+    />
   </Provider>,
   document.getElementById("root")
 );

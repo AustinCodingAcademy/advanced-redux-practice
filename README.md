@@ -28,22 +28,22 @@
 * ~~Give Provider a prop “store” and the value of the store~~
 
 ### Create Containers
-* In each Container:
-* Import connect from react-redux
-* Create a function called mapStateToProps that takes parameter state
-* Return an object. Decide what prop the component needs and this will be a key on the object
-* Decide what data from state the component needs and that will be the value on the object
-* Use the connect function and mapStateToProps to turn the component into a container
-* Export the container
+* ~~In each Container:~~
+* ~~Import connect from react-redux~~
+* ~~Create a function called mapStateToProps that takes parameter state~~
+* ~~Return an object. Decide what prop the component needs and this will be a key on the object~~
+* ~~Decide what data from state the component needs and that will be the value on the object~~
+* ~~Use the connect function and mapStateToProps to turn the component into a container~~
+* ~~Export the container~~
 
 ### ONLY make these components into Containers
-* Tickets (use as example)
-* TransactionPanel
-* TopNav
-* TasksPanel
-* Comments
-* Orders
-* Tasks
+* ~~Tickets (use as example)~~
+* ~~TransactionPanel~~
+* ~~TopNav~~
+* ~~TasksPanel~~
+* ~~Comments~~
+* ~~Orders~~
+* ~~Tasks~~
 
 ### Think - Why do the other components not care about the database such that we don't need to make them Containers??
 
