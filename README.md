@@ -1,19 +1,17 @@
 ### Reducers
-* Create a new folder called reducers
-* Create a file in this folder called index.js
-* Import combineReducers from redux
-* Create a reducer function for each piece of data in state.js
-  * newComments
-  * newTasks
-  * newOrders
-  * tickets
-  * orders
-  * tasks
-  * messages
-* Remember 2 parameters state and action. Remember to return state
-* Combine the reducers and export
-  
-
+~~* Create a new folder called reducers~~
+~~* Create a file in this folder called index.js~~
+~~* Import combineReducers from redux~~
+~~* Create a reducer function for each piece of data in state.js~~
+  ~~* newComments~~
+  ~~* newTasks~~
+  ~~* newOrders~~
+  ~~* tickets~~
+  ~~* orders~~
+  ~~* tasks~~
+  ~~* messages~~
+~~* Remember 2 parameters state and action. Remember to return state~~
+~~* Combine the reducers and export~~
 
 ### Create Database
 * Create a store.js file
@@ -40,7 +38,7 @@
 
 ### ONLY make these components into Containers
 * Tickets (use as example)
-* TransactionPanel 
+* TransactionPanel
 * TopNav
 * TasksPanel
 * Comments
@@ -50,6 +48,5 @@
 ### Think - Why do the other components not care about the database such that we don't need to make them Containers??
 
 ### Fix
-* In App.js remove the props parameter and all instances of passing props 
+* In App.js remove the props parameter and all instances of passing props
 * In index.js remove all instances of state and passing props to App
-
