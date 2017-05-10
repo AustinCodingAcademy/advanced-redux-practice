@@ -8,13 +8,14 @@ import Orders from "./components/Orders";
 import SideNav from "./components/SideNav";
 import Tasks from "./components/Tasks";
 import TasksPanel from "./components/TasksPanel";
+import TasksPanelContainer from "./components/TasksPanelContainer;"
 import Tickets from "./components/Tickets";
 import TransactionsPanel from "./components/TransactionsPanel";
 
 
 function App(props) {
   return (
-    <div> 
+    <div>
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
           <TopNav messages={props.messages} />
