@@ -21,11 +21,11 @@
 * ~~Create the store and export it~~
 
 ### Provide store to components
-* In index.js
-* Import Provider from react-redux
-* Import store from store.js
-* Use Provider component to wrap App
-* Give Provider a prop “store” and the value of the store
+* ~~In index.js~~
+* ~~Import Provider from react-redux~~
+* ~~Import store from store.js~~
+* ~~Use Provider component to wrap App~~
+* ~~Give Provider a prop “store” and the value of the store~~
 
 ### Create Containers
 * In each Container:
