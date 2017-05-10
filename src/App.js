@@ -10,11 +10,11 @@ import Tasks from "./components/Tasks";
 import TasksPanel from "./components/TasksPanel";
 import Tickets from "./components/Tickets";
 import TransactionsPanel from "./components/TransactionsPanel";
-
+import TasksPanelContainer from "./components/TasksPanelContainer";
 
 function App(props) {
   return (
-    <div> 
+    <div>
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
           <TopNav messages={props.messages} />
@@ -44,6 +44,7 @@ function App(props) {
             <div className="row">
               <DonutChart />
               <div className="col-lg-4">
+                <TasksPanelContainer />
                 <TasksPanel tasks={props.tasks} />
               </div>
               <div className="col-lg-4">

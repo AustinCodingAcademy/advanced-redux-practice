@@ -1,6 +1,6 @@
 import {combineReducers} from "redux";
 
-function messasges(state = []) {
+function messages(state = []) {
   return state;
 }
 
@@ -10,7 +10,7 @@ function tasks(state = []) {
 
 const rootReducer = combineReducers({
   messages,
-  tasks,
+  tasks
 });
 
 export default rootReducer;

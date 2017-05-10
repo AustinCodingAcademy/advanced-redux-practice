@@ -4,18 +4,24 @@ import reducer from "./reducers";
 import state from "./state";
 
 const {
-dateTime,
-newComments,
-newTasks,
-newOrders,
-tickets,
-orders,
-taskItem,
-tasks,
-messages
+  dateTime,
+  newComments,
+  newTasks,
+  newOrders,
+  tickets,
+  orders,
+  taskItem,
+  tasks,
+  messages
 } = state;
 
-const store = 
+export default createStore(
+  reducer,
+  {
+    tasks,
+    messages
+  },
 
-const dateTime = state.dateTime;
-const newComments = state.newComments;
+);
+
+// export default store;
