@@ -12,7 +12,7 @@ import TicketsContainer from "./components/TicketsContainer";
 import TransactionsPanelContainer from "./components/TransactionsPanelContainer";
 
 
-function App(props) {
+function App() {
   return (
     <div>
       <div id="wrapper">
