@@ -72,5 +72,6 @@ const mapStateToProps = function (state) {
     messages: state.messages
   };
 };
+const TopNavContainer = connect(mapStateToProps)(TopNav)
 
-export default (TopNav);
+export default TopNavContainer;

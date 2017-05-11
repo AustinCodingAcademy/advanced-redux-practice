@@ -32,5 +32,6 @@ const mapStateToProps = function (state) {
     newOrders: state.newOrders
   };
 };
+const OrdersContainer = connect(mapStateToProps)(Orders)
 
-export default (Orders);
+export default OrdersContainer;

@@ -41,5 +41,6 @@ const mapStateToProps = function (state) {
     orders: state.orders
   };
 };
+const TransactionsPanelContainer = connect(mapStateToProps)(TransactionsPanel)
 
-export default (TransactionsPanel);
+export default TransactionsPanelContainer;
