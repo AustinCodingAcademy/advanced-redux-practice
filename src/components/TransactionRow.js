@@ -1,7 +1,8 @@
 import React from "react";
+import { connect } from 'react-redux';
 
 function TransactionRow(props) {
-  return ( 
+  return (
     <tr>
       <td>{props.order.id}</td>
       <td>{props.order.orderDate}</td>

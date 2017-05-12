@@ -68,11 +68,9 @@ function TopNav(props) {
 }
 
 
-function MapStateToProps(state){
-  return{
-    messages:state.messages
-  }
-}
-const someFunction =  connect(MapStateToProps);
-const TopNavContainer = someFunction(TopNav);
-export default TopNavContainer;
+const mapStateToProps = function (state) {
+  return {
+    messages: state.messages
+  };
+};
+export default connect(mapStateToProps)(TopNav);

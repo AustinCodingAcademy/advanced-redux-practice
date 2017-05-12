@@ -4,6 +4,6 @@ import reducers from "./reducers";
 
 
 
-const store = createStore(state,reducers);
+const store = createStore(reducers, state);
 
 export default store;

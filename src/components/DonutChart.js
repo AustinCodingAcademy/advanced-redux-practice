@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from 'react-redux';
 
 function DonutChart() {
   return ( <div className="col-lg-4">

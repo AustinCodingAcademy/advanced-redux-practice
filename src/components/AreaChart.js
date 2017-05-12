@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from 'react-redux';
 
 function AreaChart() {
   return (   <div className="row">
@@ -15,5 +16,6 @@ function AreaChart() {
                 </div>
              );
 }
+
 
 export default AreaChart;
