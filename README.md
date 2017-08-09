@@ -16,11 +16,11 @@
 
 
 ### Create Database
-* Create a store.js file
-* Import createStore from redux
-* Import state from state.js
-* Import reducers from reducers/index
-* Create the store and export it
+*- Create a store.js file
+*- Import createStore from redux
+*- Import state from state.js
+*- Import reducers from reducers/index
+*- Create the store and export it
 
 ### Provide store to components
 * In index.js
