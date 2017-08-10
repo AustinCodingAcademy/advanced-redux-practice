@@ -24,9 +24,9 @@ function orders(state = [], action) {
 }
 
 
-export const rootReducer = combineReducers({
+const rootReducer = combineReducers({
   newComments, newTasks, newOrders, tickets,
   orders, tasks, messages
 });
 
- 
+export default rootReducer;
