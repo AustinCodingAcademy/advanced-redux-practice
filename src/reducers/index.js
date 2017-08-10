@@ -1,31 +1,30 @@
 import {combineReducers} from "redux";
 
-function newComments(state, action){
+function newComments(state = 0, action){
   return state;
 }
-
-function newTasks(state, action){
+function newTasks(state = 0, action){
   return state;
 }
-function newOrders(state, action){
+function newOrders(state = 0, action){
   return state;
 }
-function tickets(state, action){
+function tickets(state = 0, action){
   return state;
 }
-function orders(state, action){
+function orders(state = [], action){
   return state;
 }
-function tasks(state, action){
+function tasks(state = [], action){
   return state;
 }
-function messages(state, action){
+function messages(state = [], action){
   return state;
 }
 
 const rootReducer = combineReducers({
   newComments, newTasks, newOrders, tickets,
-  orders, tasks,messages
+  orders, tasks, messages
 });
 
 export default rootReducer;
