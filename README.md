@@ -13,8 +13,6 @@
 * Remember 2 parameters state and action. Remember to return state
 * Combine the reducers and export
   
-
-
 ### Create Database
 * Create a store.js file
 * Import createStore from redux
