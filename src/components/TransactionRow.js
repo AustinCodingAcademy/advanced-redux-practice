@@ -1,7 +1,8 @@
 import React from "react";
 
+
 function TransactionRow(props) {
-  return ( 
+  return (
     <tr>
       <td>{props.order.id}</td>
       <td>{props.order.orderDate}</td>
@@ -10,5 +11,6 @@ function TransactionRow(props) {
     </tr>
   );
 }
+
 
 export default TransactionRow;
