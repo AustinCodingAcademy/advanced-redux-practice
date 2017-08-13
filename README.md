@@ -1,8 +1,9 @@
+
 ### Reducers
-* Create a new folder called reducers
-* Create a file in this folder called index.js
-* Import combineReducers from redux
-* Create a reducer function for each piece of data in state.js
+* x Create a new folder called reducers
+* x Create a file in this folder called index.js
+* x Import combineReducers from redux
+* x Create a reducer function for each piece of data in state.js
   * newComments
   * newTasks
   * newOrders
@@ -10,24 +11,24 @@
   * orders
   * tasks
   * messages
-* Remember 2 parameters state and action. Remember to return state
-* Combine the reducers and export
+* x  Remember 2 parameters state and action. Remember to return state
+* x Combine the reducers and export
   
 
 
 ### Create Database
-* Create a store.js file
-* Import createStore from redux
-* Import state from state.js
-* Import reducers from reducers/index
-* Create the store and export it
+* x Create a store.js file
+* x Import createStore from redux
+* x Import state from state.js
+* x Import reducers from reducers/index
+* x Create the store and export it
 
 ### Provide store to components
-* In index.js
+* x In index.js
 * Import Provider from react-redux
 * Import store from store.js
 * Use Provider component to wrap App
-* Give Provider a prop “store” and the value of the store
+* x Give Provider a prop “store” and the value of the store
 
 ### Create Containers
 * In each Container:
@@ -39,17 +40,17 @@
 * Export the container
 
 ### ONLY make these components into Containers
-* Tickets (use as example)
-* TransactionPanel 
-* TopNav
-* TasksPanel
-* Comments
-* Orders
-* Tasks
+* xTickets (use as example)
+* xTransactionPanel 
+* xTopNav
+* xTasksPanel
+* xComments
+* xOrders
+* xTasks 
 
 ### Think - Why do the other components not care about the database such that we don't need to make them Containers??
 
 ### Fix
-* In App.js remove the props parameter and all instances of passing props 
-* In index.js remove all instances of state and passing props to App
+* x In App.js remove the props parameter and all instances of passing props 
+* x In index.js remove all instances of state and passing props to App
 

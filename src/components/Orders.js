@@ -1,5 +1,6 @@
 import React from "react";
-
+import {connect} from 'react-redux';
+ 
 function Orders(props) {
   return ( 
     <div className="col-lg-3 col-md-6">
@@ -26,4 +27,7 @@ function Orders(props) {
     </div>);
 }
 
-export default Orders;
+const mapStateToProps = function(state) {
+  newOrders: state.newOrders
+}
+export default connect(mapStateToProps,null)(Orders);
