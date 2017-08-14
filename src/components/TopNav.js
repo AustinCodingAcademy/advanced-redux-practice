@@ -67,9 +67,9 @@ function TopNav(props) {
     </ul>);
 }
 
-const mapStateToProps = function(state) {
+const mapStateToProps = (state) => {
     return {
-        messages: state.message
-    }
-}
+        messages: state.messages
+    };
+};
 export default connect(mapStateToProps,null)(TopNav);

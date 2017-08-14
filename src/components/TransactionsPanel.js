@@ -36,10 +36,16 @@ function TransactionsPanel(props) {
     </div> );
 }
 
-const mapStateToProps = function (state){
+const mapStateToProps = (state)=> {
     return {
         orders: state.orders
     };
 };
+
+// const mapStateToProps = (state) => {
+//  return {
+//    user: state.currentUser
+//  };
+// };
 
 export default connect(mapStateToProps,null)(TransactionsPanel);
