@@ -1,5 +1,8 @@
 import React from "react";
 import TaskItem from "./TaskItem";
+import { connect } from 'react-redux';
+
+
 function TasksPanel(props) {
   return (  <div className="panel panel-default">
                 <div className="panel-heading">
@@ -12,7 +15,7 @@ function TasksPanel(props) {
                           return <TaskItem key={i} task={t} />;
                         })
                       }
-                        
+
                     </div>
                     <div className="text-right">
                         <a href="#">View All Activity <i className="fa fa-arrow-circle-right"></i></a>
@@ -22,4 +25,18 @@ function TasksPanel(props) {
         );
 }
 
-export default TasksPanel;
+function mapStateToProps(state) {
+   return {
+     tasks: state.tasks
+   }
+ }
+
+ // function mapDispatchToProps(dispatch){
+ //  return {
+ //    setCurrentUser:function(user){
+ //      dispatch(setCurrentUser(user));
+ //    }
+ //  }
+ // }
+
+ export default connect(mapStateToProps)(TasksPanel);
