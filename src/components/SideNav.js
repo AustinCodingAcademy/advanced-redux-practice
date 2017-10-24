@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from 'react-redux';
 
 function SideNav() {
   return (<div className="collapse navbar-collapse navbar-ex1-collapse">
