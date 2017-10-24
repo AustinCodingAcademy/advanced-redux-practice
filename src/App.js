@@ -7,14 +7,16 @@ import DonutChart from "./components/DonutChart";
 import Orders from "./components/Orders";
 import SideNav from "./components/SideNav";
 import Tasks from "./components/Tasks";
-import TasksPanel from "./components/TasksPanel";
+// import TasksPanel from "./components/TasksPanel";
+// Where to use TasksPanelContainer?
+import TasksPanelContainer from "./components/TasksPanelContainer";
 import Tickets from "./components/Tickets";
 import TransactionsPanel from "./components/TransactionsPanel";
 
 
 function App(props) {
   return (
-    <div> 
+    <div>
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
           <TopNav messages={props.messages} />
@@ -44,7 +46,7 @@ function App(props) {
             <div className="row">
               <DonutChart />
               <div className="col-lg-4">
-                <TasksPanel tasks={props.tasks} />
+                <TasksPanelContainer />
               </div>
               <div className="col-lg-4">
                 <TransactionsPanel orders={props.orders} />
