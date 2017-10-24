@@ -15,7 +15,7 @@ A dashboard is a common type of user interface used to show a variety of informa
   * messages
 * Remember 2 parameters state and action. Remember to return state
 * Combine the reducers and export
-  
+
 
 
 ### Create Database
@@ -41,9 +41,9 @@ A dashboard is a common type of user interface used to show a variety of informa
 * Use the connect function and mapStateToProps to turn the component into a container
 * Export the container
 
-### ONLY make these components into Containers
+### ONLY make these components into Containers 
 * Tickets (use as example)
-* TransactionPanel 
+* TransactionPanel
 * TopNav
 * TasksPanel
 * Comments
@@ -53,6 +53,5 @@ A dashboard is a common type of user interface used to show a variety of informa
 ### Think - Why do the other components not care about the database such that we don't need to make them Containers??
 
 ### Fix
-* In App.js remove the props parameter and all instances of passing props 
+* In App.js remove the props parameter and all instances of passing props
 * In index.js remove all instances of state and passing props to App
-
