@@ -2,21 +2,24 @@ import React from "react";
 import TopNav from "./components/TopNav";
 import PropTypes from "prop-types";
 import AreaChart from "./components/AreaChart";
-import Comments from "./components/Comments";
 import DonutChart from "./components/DonutChart";
-import Orders from "./components/Orders";
 import SideNav from "./components/SideNav";
-import Tasks from "./components/Tasks";
-import TasksPanel from "./components/TasksPanel";
-import Tickets from "./components/Tickets";
-import TransactionsPanel from "./components/TransactionsPanel";
+import TicketsContainer from "./components/TicketsContainer.js";
+import TasksPanelContainer from "./components/TasksPanelContainer";
+import TransactionsPanelContainer from "./components/TransactionsPanelContainer";
+import TopNavContainer from "./components/TopNavContainer";
+import CommentsContainer from "./components/CommentsContainer";
+import OrdersContainer from "./components/OrdersContainer";
+import TasksContainer from "./components/TasksContainer";
+
 
 
 function App(props) {
   return (
-    <div> 
+    <div>
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <TopNavContainer />
           <TopNav messages={props.messages} />
           <SideNav />
         </nav>
@@ -35,19 +38,19 @@ function App(props) {
               </div>
             </div>
             <div className="row">
-              <Comments newComments={props.newComments} />
-              <Tasks newTasks={props.newTasks} />
-              <Orders newOrders={props.newOrders} />
-              <Tickets tickets={props.tickets} />
+              <CommentsContainer />
+              <TasksContainer />
+              <OrdersContainer />
+              <TicketsContainer />
             </div>
             <AreaChart />
             <div className="row">
               <DonutChart />
               <div className="col-lg-4">
-                <TasksPanel tasks={props.tasks} />
+                <TasksPanelContainer />
               </div>
               <div className="col-lg-4">
-                <TransactionsPanel orders={props.orders} />
+                <TransactionsPanelContainer />
               </div>
             </div>
           </div>
