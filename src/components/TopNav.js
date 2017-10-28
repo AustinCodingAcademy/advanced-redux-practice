@@ -1,7 +1,9 @@
 import React from "react";
 import MessagePreview from "./MessagePreview";
+import { connect } from "react-redux";
 
 function TopNav(props) {
+
   return (
     <ul className="nav navbar-right top-nav">
       <li className="dropdown">
@@ -12,7 +14,7 @@ function TopNav(props) {
                   return <MessagePreview key={i} message={m} />;
                 })
             }
-         
+
           <li className="message-footer">
             <a href="#">Read All New Messages</a>
           </li>
@@ -65,5 +67,10 @@ function TopNav(props) {
       </li>
     </ul>);
 }
-
-export default TopNav;
+const mapStateToProps = function (state) {
+  return {
+    messages: state.messages
+  };
+};
+const MessageContainer = connect(mapStateToProps)(TopNav);
+export default MessageContainer;

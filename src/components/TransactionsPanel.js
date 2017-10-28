@@ -1,8 +1,11 @@
 import React from "react";
 import TransactionRow from "./TransactionRow";
+import {connect} from "react-redux";
 
 function TransactionsPanel(props) {
-  return ( 
+
+  console.log(props,'props');
+  return (
     <div className="panel panel-default">
         <div className="panel-heading">
             <h3 className="panel-title"><i className="fa fa-money fa-fw"></i> Transactions Panel</h3>
@@ -20,11 +23,11 @@ function TransactionsPanel(props) {
                     </thead>
                     <tbody>
                       {
-                        props.orders.map(function (order,i) {
+                        props.order.map(function (order,i) {
                           return <TransactionRow key={i} order={order} />;
                         })
                       }
-                       
+
                     </tbody>
                 </table>
             </div>
@@ -34,5 +37,10 @@ function TransactionsPanel(props) {
         </div>
     </div> );
 }
-
-export default TransactionsPanel;
+const mapStateToProps = function (state) {
+  return {
+    order: state.orders
+  };
+};
+const OrderContainer = connect(mapStateToProps)(TransactionsPanel);
+export default OrderContainer;
