@@ -3,22 +3,24 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "./index.css";
 import state from "./state";
+import {Provider} from 'react-redux';
+import store from './store';
 
-const {
-dateTime,
-newComments,
-newTasks,
-newOrders,
-tickets,
-orders,
-taskItem,
-tasks,
-messages
-} = state;
+// const {
+// dateTime,
+// newComments,
+// newTasks,
+// newOrders,
+// tickets,
+// orders,
+// taskItem,
+// tasks,
+// messages
+// } = state;
 
 ReactDOM.render(
-  <App 
-    taskItem={taskItem}
+  <Provider store={store}><App 
+    /* taskItem={taskItem}
     dateTime={dateTime}
     newComments={newComments}
     newTasks={newTasks}
@@ -26,7 +28,7 @@ ReactDOM.render(
     tickets={tickets}
     orders={orders} 
     messages={messages}
-    tasks={tasks}
-    />,
+    tasks={tasks} */
+    /></Provider>,
   document.getElementById("root")
 );
