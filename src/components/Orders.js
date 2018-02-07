@@ -1,7 +1,8 @@
 import React from "react";
+import { connect } from "react-redux";
 
 function Orders(props) {
-  return ( 
+  return (
     <div className="col-lg-3 col-md-6">
       <div className="panel panel-yellow">
         <div className="panel-heading">
@@ -25,5 +26,11 @@ function Orders(props) {
       </div>
     </div>);
 }
+function mapStateToProps(state) {
+  return {
+    orders: state.newOrders
+  };
+};
 
-export default Orders;
+const OrdersContainer = connect(mapStateToProps)(Orders);
+export default OrdersContainer;

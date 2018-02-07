@@ -1,32 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
 import App from "./App";
 import "./index.css";
+import { Provider } from "react-redux";
+import store from "./store";
 import state from "./state";
 
-const {
-dateTime,
-newComments,
-newTasks,
-newOrders,
-tickets,
-orders,
-taskItem,
-tasks,
-messages
-} = state;
-
-ReactDOM.render(
-  <App 
-    taskItem={taskItem}
-    dateTime={dateTime}
-    newComments={newComments}
-    newTasks={newTasks}
-    newOrders={newOrders}
-    tickets={tickets}
-    orders={orders} 
-    messages={messages}
-    tasks={tasks}
-    />,
-  document.getElementById("root")
-);
+function renderApp() {
+  render( <Provider store={store}><App /></Provider>,
+  document.getElementById('root'));
+}
+renderApp();
