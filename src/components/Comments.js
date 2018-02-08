@@ -1,7 +1,9 @@
 import React from "react";
+//redux
+import { connect } from "react-redux";
 
 function Comments(props) {
-  return ( 
+  return (
     <div className="col-lg-3 col-md-6">
       <div className="panel panel-primary">
           <div className="panel-heading">
@@ -25,5 +27,10 @@ function Comments(props) {
       </div>
     </div>);
 }
+function mapStateToProps(state) {
+  return {
+    newComments: state.newComments
+  };
+}
 
-export default Comments;
+export default connect(mapStateToProps)(Comments);
