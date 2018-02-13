@@ -1,15 +1,15 @@
 import React from "react";
-import TopNav from "./components/TopNav";
+import TopNavContainer from "./containers/TopNavContainer";
 import PropTypes from "prop-types";
 import AreaChart from "./components/AreaChart";
-import Comments from "./components/Comments";
+import CommentsContainer from "./containers/CommentsContainer";
 import DonutChart from "./components/DonutChart";
-import Orders from "./components/Orders";
+import OrdersContainer from "./containers/OrdersContainer";
 import SideNav from "./components/SideNav";
 import Tasks from "./components/Tasks";
-import TasksPanel from "./components/TasksPanel";
-import Tickets from "./components/Tickets";
-import TransactionsPanel from "./components/TransactionsPanel";
+import TasksPanelContainer from "./containers/TasksPanelContainer";
+import TicketsContainer from "./containers/TicketsContainer";
+import TransactionsPanelContainer from "./containers/TransactionsPanelContainer";
 
 
 function App(props) {
@@ -17,7 +17,7 @@ function App(props) {
     <div> 
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <TopNav messages={props.messages} />
+          <TopNavContainer messages={props.messages} />
           <SideNav />
         </nav>
         <div id="page-wrapper">
@@ -35,19 +35,19 @@ function App(props) {
               </div>
             </div>
             <div className="row">
-              <Comments newComments={props.newComments} />
+              <CommentsContainer />
               <Tasks newTasks={props.newTasks} />
-              <Orders newOrders={props.newOrders} />
-              <Tickets tickets={props.tickets} />
+              <OrdersContainer />
+              <TicketsContainer />
             </div>
             <AreaChart />
             <div className="row">
               <DonutChart />
               <div className="col-lg-4">
-                <TasksPanel tasks={props.tasks} />
+                <TasksPanelContainer />
               </div>
               <div className="col-lg-4">
-                <TransactionsPanel orders={props.orders} />
+                <TransactionsPanelContainer />
               </div>
             </div>
           </div>
@@ -58,6 +58,7 @@ function App(props) {
   );
 }
 
+/*
 App.propTypes = {
   dateTime: PropTypes.string.isRequired,
   newComments: PropTypes.number.isRequired,
@@ -69,5 +70,6 @@ App.propTypes = {
   messages: PropTypes.array,
   tasks: PropTypes.array
 };
+*/
 
 export default App;
