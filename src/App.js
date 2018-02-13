@@ -6,7 +6,7 @@ import CommentsContainer from "./containers/CommentsContainer";
 import DonutChart from "./components/DonutChart";
 import OrdersContainer from "./containers/OrdersContainer";
 import SideNav from "./components/SideNav";
-import Tasks from "./components/Tasks";
+import TasksContainer from "./containers/TasksContainer";
 import TasksPanelContainer from "./containers/TasksPanelContainer";
 import TicketsContainer from "./containers/TicketsContainer";
 import TransactionsPanelContainer from "./containers/TransactionsPanelContainer";
@@ -17,7 +17,7 @@ function App(props) {
     <div> 
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <TopNavContainer messages={props.messages} />
+          <TopNavContainer />
           <SideNav />
         </nav>
         <div id="page-wrapper">
@@ -36,7 +36,7 @@ function App(props) {
             </div>
             <div className="row">
               <CommentsContainer />
-              <Tasks newTasks={props.newTasks} />
+              <TasksContainer />
               <OrdersContainer />
               <TicketsContainer />
             </div>
