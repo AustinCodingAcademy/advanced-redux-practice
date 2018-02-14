@@ -1,7 +1,8 @@
 import React from "react";
+import { connect } from 'react-redux';
 
 function Comments(props) {
-  return ( 
+  return (
     <div className="col-lg-3 col-md-6">
       <div className="panel panel-primary">
           <div className="panel-heading">
@@ -10,7 +11,7 @@ function Comments(props) {
                       <i className="fa fa-comments fa-5x"></i>
                   </div>
                   <div className="col-xs-9 text-right">
-                      <div className="huge">{props.newComments}</div>
+                      <div className="huge">{props.newComments}</div> {/*this is where redux happens*/}
                       <div>New Comments!</div>
                   </div>
               </div>
@@ -26,4 +27,14 @@ function Comments(props) {
     </div>);
 }
 
-export default Comments;
+
+function mapStateToProps(state){
+ return{
+   newComments:state.newComments
+ }
+}
+
+const newCommentsContainer= connect(
+ mapStateToProps
+)(Comments);
+export default newCommentsContainer;

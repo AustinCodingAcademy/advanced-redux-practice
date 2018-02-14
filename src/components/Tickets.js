@@ -1,5 +1,5 @@
 import React from "react";
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 
 function Tickets(props) {
   return(
@@ -26,12 +26,15 @@ function Tickets(props) {
       </div>
     </div>);
 }
+
 const mapStateToProps = function (state) {
   return {
     tickets: state.tickets
-  };
-};
-export default (Tickets);
+  }
+}
+
+const ticketsContainer= connect(
+ mapStateToProps
+)(Tickets);
+export default ticketsContainer;
 // export default connect(mapStateToProps,null)(Tickets);
-
-
