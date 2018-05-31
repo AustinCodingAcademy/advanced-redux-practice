@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 function Tasks(props) {
   return (
@@ -29,6 +30,10 @@ function Tasks(props) {
     </div>
   );
 }
+
+Tasks.propTypes = {
+  newTasks: PropTypes.number.isRequired,
+};
 
 const mapStateToProps = (state) => {
   return {

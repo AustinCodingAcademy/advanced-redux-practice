@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 function Comments(props) {
   return (
@@ -29,7 +30,9 @@ function Comments(props) {
     </div>
   );
 }
-
+Comments.propTypes = {
+  newComments: PropTypes.number.isRequired
+};
 const mapStateToProps = (state) => {
   return {
     newComments: state.newComments,

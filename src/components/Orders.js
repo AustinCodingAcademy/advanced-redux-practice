@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 function Orders(props) {
@@ -29,6 +30,9 @@ function Orders(props) {
     </div>
   );
 }
+Orders.propTypes = {
+  newOrders: PropTypes.number.isRequired,
+};
 const mapStateToProps = (state) => {
   return {
     newOrders: state.newOrders,    

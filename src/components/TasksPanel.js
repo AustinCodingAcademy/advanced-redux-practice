@@ -1,6 +1,7 @@
 import React from "react";
 import TaskItem from "./TaskItem";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 function TasksPanel(props) {
   return (
@@ -12,7 +13,7 @@ function TasksPanel(props) {
       </div>
       <div className="panel-body">
         <div className="list-group">
-          {props.tasks.map(function(t, i) {
+          {props.tasks.map((t, i) => {
             return <TaskItem key={i} task={t} />;
           })}
         </div>
@@ -25,6 +26,11 @@ function TasksPanel(props) {
     </div>
   );
 }
+
+TasksPanel.propTypes = {
+  tasks: PropTypes.array.isRequired,
+};
+
 const mapStateToProps = (state) => {
   return {
     tasks: state.tasks,

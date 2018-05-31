@@ -1,6 +1,7 @@
 import React from "react";
 import TransactionRow from "./TransactionRow";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 function TransactionsPanel(props) {
   return (
@@ -22,7 +23,7 @@ function TransactionsPanel(props) {
               </tr>
             </thead>
             <tbody>
-              {props.orders.map(function (order, i) {
+              {props.orders.map((order, i) => {
                 return <TransactionRow key={i} order={order} />;
               })}
             </tbody>
@@ -38,7 +39,11 @@ function TransactionsPanel(props) {
   );
 }
 
-const mapStateToProps = function (state) {
+TransactionsPanel.propTypes = {
+  orders: PropTypes.array.isRequired,
+};
+
+const mapStateToProps = (state) => {
   return {
     orders: state.orders,
   };

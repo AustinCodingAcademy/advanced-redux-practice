@@ -1,6 +1,7 @@
 import React from "react";
 import MessagePreview from "./MessagePreview";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 function TopNav(props) {
   return (
@@ -10,7 +11,7 @@ function TopNav(props) {
           <i className="fa fa-envelope" /> <b className="caret" />
         </a>
         <ul className="dropdown-menu message-dropdown">
-          {props.messages.map(function(m, i) {
+          {props.messages.map((m, i) => {
             return <MessagePreview key={i} message={m} />;
           })}
 
@@ -95,6 +96,9 @@ function TopNav(props) {
     </ul>
   );
 }
+TopNav.propTypes = {
+  messages: PropTypes.array.isRequired,
+};
 const mapStateToProps = (state) => {
   return {
     messages: state.messages,

@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function TransactionRow(props) {
-  return ( 
+  return (
     <tr>
       <td>{props.order.id}</td>
       <td>{props.order.orderDate}</td>
@@ -11,4 +12,7 @@ function TransactionRow(props) {
   );
 }
 
+TransactionRow.propTypes = {
+  order: PropTypes.object.isRequired,
+};
 export default TransactionRow;
