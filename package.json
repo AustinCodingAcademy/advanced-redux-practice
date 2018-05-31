@@ -15,8 +15,8 @@
     "prop-types": "^15.5.8",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react-redux": "^5.0.4",
-    "redux": "^3.6.0"
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2"
   },
   "scripts": {
     "start": "nf start",
