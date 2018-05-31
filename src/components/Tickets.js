@@ -32,7 +32,7 @@ function Tickets(props) {
 }
 
 Tickets.propTypes = {
-  tickets: PropTypes.array.isRequired
+  tickets: PropTypes.number.isRequired
 };
 
 const mapStateToProps = function (state) {

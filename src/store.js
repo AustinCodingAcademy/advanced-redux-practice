@@ -5,5 +5,4 @@ import state from "./state";
 // just take this reducers thing for granted right now
 import reducers from "./reducers";
 const store = createStore(reducers, state);
-console.log("store", store);
 export default store;
