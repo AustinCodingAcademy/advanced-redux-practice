@@ -1,5 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
+import PropTypes from 'prop-types';
 
 function Tickets(props) {
   return(
@@ -26,12 +27,19 @@ function Tickets(props) {
       </div>
     </div>);
 }
+
+Tickets.propTypes = {
+  tickets: PropTypes.number
+};
+
+
 const mapStateToProps = function (state) {
   return {
     tickets: state.tickets
   };
 };
-export default (Tickets);
-// export default connect(mapStateToProps,null)(Tickets);
 
+const TicketsContainer = connect(mapStateToProps)(Tickets);
+
+export default TicketsContainer;
 

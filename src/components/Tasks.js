@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 function Tasks(props) {
   return ( <div className="col-lg-3 col-md-6">
@@ -25,5 +27,16 @@ function Tasks(props) {
                     </div>);
 }
 
-export default Tasks;
+Tasks.propTypes = {
+  newTasks: PropTypes.number
+};
 
+const mapStateToProps = (state) => {
+  return {
+    newTasks: state.newTasks
+  };
+};
+ 
+const TasksContainer = connect(mapStateToProps)(Tasks);
+ 
+export default TasksContainer;

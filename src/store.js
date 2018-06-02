@@ -5,6 +5,6 @@ import state from "./state";
 //just take this reducers thing for granted right now
 import reducers from "./reducers";
 
-var store = createStore(reducers,state);
+const store = createStore(reducers,state);
 
 export default store;
