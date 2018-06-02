@@ -1,5 +1,7 @@
 import React from "react";
 import MessagePreview from "./MessagePreview";
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 function TopNav(props) {
   return (
@@ -66,4 +68,12 @@ function TopNav(props) {
     </ul>);
 }
 
-export default TopNav;
+const mapStateToProps = (state) => {return{messages:state.messages}}
+
+const TopNavContainer = connect(mapStateToProps)(TopNav)
+
+export default TopNavContainer;
+
+TopNavContainer.PropTypes = {
+    messages: PropTypes.array
+}
