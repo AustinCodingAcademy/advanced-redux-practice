@@ -12,13 +12,13 @@ import Tickets from "./components/Tickets";
 import TransactionsPanel from "./components/TransactionsPanel";
 
 
-function App(props) {
+function App() {
   return (
     <div> 
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <TopNav messages={props.messages} />
-          <SideNav />
+          <TopNav/>
+          <SideNav/>
         </nav>
         <div id="page-wrapper">
           <div className="container-fluid">
@@ -35,19 +35,19 @@ function App(props) {
               </div>
             </div>
             <div className="row">
-              <Comments newComments={props.newComments} />
-              <Tasks newTasks={props.newTasks} />
-              <Orders newOrders={props.newOrders} />
-              <Tickets tickets={props.tickets} />
+              <Comments/>
+              <Tasks/>
+              <Orders/>
+              <Tickets/>
             </div>
             <AreaChart />
             <div className="row">
               <DonutChart />
               <div className="col-lg-4">
-                <TasksPanel tasks={props.tasks} />
+                <TasksPanel/>
               </div>
               <div className="col-lg-4">
-                <TransactionsPanel orders={props.orders} />
+                <TransactionsPanel/>
               </div>
             </div>
           </div>
