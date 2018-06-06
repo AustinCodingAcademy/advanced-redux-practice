@@ -27,6 +27,10 @@ function Comments(props) {
     </div>);
 }
 
-const mapStateToProps = (state) => {return{newComments:state.newComments}}
+const mapStateToProps = (state) => {
+    return {newComments:state.newComments}
+}
+
 const CommentsContainer = connect(mapStateToProps)(Comments)
+
 export default CommentsContainer;

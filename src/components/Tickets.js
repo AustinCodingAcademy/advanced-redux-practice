@@ -27,8 +27,12 @@ function Tickets(props) {
     </div>);
 }
 
-const mapStateToProps = (state) => {return{tickets:state.tickets}}
+const mapStateToProps = (state) => {
+  return {tickets:state.tickets}
+}
+
 const TicketsContainer = connect(mapStateToProps)(Tickets)
+
 export default TicketsContainer;
 
 
