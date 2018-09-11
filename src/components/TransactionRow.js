@@ -1,4 +1,5 @@
 import React from "react";
+import {connect} from 'react-redux'
 
 function TransactionRow(props) {
   return ( 
@@ -11,4 +12,11 @@ function TransactionRow(props) {
   );
 }
 
-export default TransactionRow;
+function mapStateToProps(state){
+  return {
+    orders: state.order
+  }
+}
+
+const TransactionContainer = connect(mapStateToProps)(TransactionRow)
+export default TransactionContainer

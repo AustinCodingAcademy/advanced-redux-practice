@@ -1,5 +1,6 @@
 import React from "react";
 import DateTime from "./DateTime";
+import {connect} from 'react-redux'
 
 function MessagePreview(props) {
   return (    
@@ -12,7 +13,7 @@ function MessagePreview(props) {
           <div className="media-body">
             <h5 className="media-heading"><strong>{props.message.name}</strong>
             </h5>
-            <DateTime date={props.message.date} />
+            <DateTime date={props.message.date}/>
             <p>{props.message.message}</p>
           </div>
         </div>
@@ -21,4 +22,11 @@ function MessagePreview(props) {
   );
 }
 
-export default MessagePreview;
+function mapStateToProps(state){
+  return{
+    messages: state.messages
+  }
+}
+
+const MessageContiner = connect(mapStateToProps)(MessagePreview)
+export default MessageContiner

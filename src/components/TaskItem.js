@@ -1,4 +1,5 @@
 import React from "react";
+import {connect} from 'react-redux'
 
 function TaskItem(props) {
   return (<a href="#" className="list-group-item">
@@ -7,5 +8,12 @@ function TaskItem(props) {
           </a> );
 }
 
-export default TaskItem;
 
+function mapStateToProps(state){
+  return{
+    tasks: state.task,
+  }
+}
+
+const TaskItemContainer = connect(mapStateToProps)(TaskItem)
+export default TaskItemContainer

@@ -1,4 +1,6 @@
 import React from "react";
+import {connect} from 'react-redux'
+import PropTypes from 'prop-types'
 
 function Orders(props) {
   return ( 
@@ -26,4 +28,15 @@ function Orders(props) {
     </div>);
 }
 
-export default Orders;
+function mapStateToProps(state){
+  return {
+    newOrders: state.newOrders
+  }
+}
+
+Orders.propTypes = {
+  newOrders: PropTypes.number.isRequired
+}
+
+const newOrdersContainer= connect(mapStateToProps)(Orders)
+export default newOrdersContainer

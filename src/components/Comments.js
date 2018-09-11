@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 function Comments(props) {
   return ( 
@@ -25,5 +27,16 @@ function Comments(props) {
       </div>
     </div>);
 }
+Comments.propTypes = {
+    newComments: PropTypes.number.isRequired
+}
+function mapStateToProps(state){
+    return {
+        newComments: state.newComments
+    }
+    
+}
 
-export default Comments;
+const newMessagesContainer = connect(mapStateToProps)(Comments)
+export default newMessagesContainer
+
