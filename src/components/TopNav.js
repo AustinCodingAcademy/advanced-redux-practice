@@ -1,6 +1,7 @@
 import React from "react";
 import MessagePreview from "./MessagePreview";
-
+//import connect from react-redux//
+import {connect} from 'react-redux';
 function TopNav(props) {
   return (
     <ul className="nav navbar-right top-nav">
@@ -67,3 +68,18 @@ function TopNav(props) {
 }
 
 export default TopNav;
+//create a function called mapStateToProps that takes parameter state//
+//Return an object... Decide what prop the component needs and this will be a key on the object//
+//Decide what date from State the component needs and that will be the value on the object//
+let topNavDivs= props.topNavs.map((topNav)=>{
+    return <div> {topNav} </div>
+});
+function mapStateToProps(state){
+    return {
+        topNav: state.topNav
+    }
+}
+//use the connect function and mapStateToProps to turn the component into a container//
+const TopNavContainer = connect(mapStateToProps)(topNav);
+//Export the container//
+export default TopNavContainer;

@@ -1,4 +1,6 @@
 import React from "react";
+//import ocnnect from react-redux//
+import {connect} from 'react-redux';
 
 function Tasks(props) {
   return ( <div className="col-lg-3 col-md-6">
@@ -26,4 +28,21 @@ function Tasks(props) {
 }
 
 export default Tasks;
+//Create a function called mapStateToProps that takes parameter state//
+//Return an object, decide what prop the component needs and this will be a key on the object//
+//Decide what data from state the component needs and that will be the value on the object//
+//Use the Connect function and mapStateToProps//
+function Tasks(props){
+    lettaskDivs= props.tasks.map((tasks)=>{
+        return <div>{tasks}</div>
+    });
+    function mapStateToProps(state){
+        return{
+            tasks:state.tasks
+        }
+    }
+    const TasksContainer = connect(
+        mapStateToProps)(Tasks);
+//Export the container//
+    export default TasksContainer;
 

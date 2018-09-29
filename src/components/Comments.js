@@ -1,4 +1,6 @@
 import React from "react";
+//import connect from react-redux//
+import{connect} from 'react-redux';
 
 function Comments(props) {
   return ( 
@@ -27,3 +29,22 @@ function Comments(props) {
 }
 
 export default Comments;
+//Create a function called mapStateToProps that takes parameter state//
+//Return an object, Decide what prop the component needs and this will be a key on the object//
+//Dcide what date from the State the component needs and that will be the value on the object//
+//Use the connect function and mapStateToProps to turn the component into a contianer//
+//Export the container//
+function Comments(props){
+    let commentDivs = props.comments.map ((comments)=>{
+        return <div>{comment}</div>
+    });
+    function mapStateToProps(state){
+        return {
+            comments:state.comments
+        }
+    }
+    const CommentContainer = connect(
+        mapStateToProps)(Comments);
+        export default CommentsContainer
+    )
+}

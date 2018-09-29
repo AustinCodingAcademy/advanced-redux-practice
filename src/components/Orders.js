@@ -1,5 +1,6 @@
 import React from "react";
-
+//import connect from react redux//
+import {connect} from 'react-redux';
 function Orders(props) {
   return ( 
     <div className="col-lg-3 col-md-6">
@@ -27,3 +28,20 @@ function Orders(props) {
 }
 
 export default Orders;
+//create a function called mapStateToProps that takes parameter state, returns an object//
+//Decide what date from State the component needs and that will be the value on the object//
+//Use the connect function and mapStateToProps to turn the component into a container//
+function Orders (props){
+  let orderDivs = props.orders.map ((order)=>{
+    return <div>{order} </div>
+  }
+  function mapStateToProps(state){
+    return{
+      orders:state.orders
+    }
+  }
+  const ordersContainer = connect(mapStateToProps)(Orders);
+  //Export the Container//
+    export default OrdersContainer
+  
+}

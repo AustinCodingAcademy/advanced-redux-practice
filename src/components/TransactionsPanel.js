@@ -1,5 +1,7 @@
 import React from "react";
 import TransactionRow from "./TransactionRow";
+//import connect from react-redux//
+import {connect} from 'react-redux';
 
 function TransactionsPanel(props) {
   return ( 
@@ -34,5 +36,20 @@ function TransactionsPanel(props) {
         </div>
     </div> );
 }
+let transactionPanelDivs = props.TransactionPanel.map((transactionPanel)=>{
+    return <div> {transactionPanelDivs} </div>
+}
+//create a function called mapStateTo Props that takes a parameter state//
+//return an object decide what prop the component needs and this will be a key on the object//
+//decide what data from state the component needs and that will be the VALUE on the object//
+function mapStateToProps(state){
+    return{
+        transactionPanel:state.transactionPanel
+    }
+}
+//use the connect function and mapStateProps to turn the component into a container//
+//export the container//
 
-export default TransactionsPanel;
+const transactionPanelContainer = connect(mapStateToProps)(TransactionPanel);
+export default TransactionPanelContainer;
+
