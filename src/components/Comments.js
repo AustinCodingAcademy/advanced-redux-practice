@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from 'react-redux';
 
 function Comments(props) {
   return ( 
@@ -10,7 +11,7 @@ function Comments(props) {
                       <i className="fa fa-comments fa-5x"></i>
                   </div>
                   <div className="col-xs-9 text-right">
-                      <div className="huge">{props.newComments}</div>
+                      <div className="huge">{props.comments}</div>
                       <div>New Comments!</div>
                   </div>
               </div>
@@ -25,5 +26,17 @@ function Comments(props) {
       </div>
     </div>);
 }
+//line 14 has the comments prop name
+//the left hand side, the key of the object is the name of the prop
 
-export default Comments;
+//the right hand side needs to be whatver the reducer is (eg, newComments)
+
+function mapStateToProps(state){
+    return {
+        comments:state.newComments
+    }
+}
+
+//name of the component
+const CommentsContainer = connect(mapStateToProps)(Comments);
+export default CommentsContainer;
