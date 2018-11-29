@@ -29,9 +29,9 @@ function Tickets(props) {
 const mapStateToProps = function (state) {
   return {
     tickets: state.tickets
-  };
-};
-export default (Tickets);
-// export default connect(mapStateToProps,null)(Tickets);
+  }
+}
+const TicketsContainer= connect(mapStateToProps)(Tickets);//name of component
+export default TicketsContainer;
 
 
