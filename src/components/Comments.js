@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from 'react-redux';
 
 function Comments(props) {
   return ( 
@@ -10,7 +11,7 @@ function Comments(props) {
                       <i className="fa fa-comments fa-5x"></i>
                   </div>
                   <div className="col-xs-9 text-right">
-                      <div className="huge">{props.newComments}</div>
+                      <div className="huge">{props.comments}</div>
                       <div>New Comments!</div>
                   </div>
               </div>
@@ -26,4 +27,18 @@ function Comments(props) {
     </div>);
 }
 
-export default Comments;
+//the left hand side, the key of the object is the name of the prop
+//the right hand side, represents the comment component reducer
+function mapStateToProps(state){
+    return{
+      comments:state.newComments
+    }
+   }
+   
+//    let connector=connect(mapStateToProps); you could do this, then have const CommentsContainer=(Comments)
+//    below is the same thing
+   const CommentsContainer= connect(mapStateToProps)(Comments);
+   export default CommentsContainer
+// a component connected to redux is named container
+
+//export default Comments;

@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from 'react-redux';
 
 function Orders(props) {
   return ( 
@@ -10,7 +11,7 @@ function Orders(props) {
               <i className="fa fa-shopping-cart fa-5x"></i>
             </div>
             <div className="col-xs-9 text-right">
-              <div className="huge">{props.newOrders}</div>
+              <div className="huge">{props.orders}</div>
               <div>New Orders!</div>
             </div>
           </div>
@@ -26,4 +27,12 @@ function Orders(props) {
     </div>);
 }
 
-export default Orders;
+function mapStateToProps(state){
+  return{
+    orders:state.newOrders
+  }
+ }
+
+const OrdersContainer= connect(mapStateToProps)(Orders);
+export default OrdersContainer
+//export default Orders;
