@@ -10,5 +10,5 @@ function TransactionRow(props) {
     </tr>
   );
 }
-
+ 
 export default TransactionRow;
