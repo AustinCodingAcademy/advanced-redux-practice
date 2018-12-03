@@ -10,10 +10,7 @@ import {Provider} from 'react-redux';
 const {
 dateTime,
 newTasks,
-newOrders,
-tickets,
 orders,
-taskItem,
 tasks,
 messages
 } = state;
@@ -21,11 +18,8 @@ messages
 ReactDOM.render(
   <Provider store={store}>
     <App 
-      taskItem={taskItem}
       dateTime={dateTime}
       newTasks={newTasks}
-      newOrders={newOrders}
-      tickets={tickets}
       orders={orders} 
       messages={messages}
       tasks={tasks}

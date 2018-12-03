@@ -1,4 +1,5 @@
 import React from "react";
+// import { connect } from 'react-redux';
 
 function TaskItem(props) {
   return (<a href="#" className="list-group-item">
@@ -7,5 +8,10 @@ function TaskItem(props) {
           </a> );
 }
 
+// function mapStateToProps(state){
+//   return {
+//     newTasks: state.TaskItem
+//   }
+// }
 export default TaskItem;
 

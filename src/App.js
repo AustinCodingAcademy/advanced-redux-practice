@@ -36,9 +36,9 @@ function App(props) {
             </div>
             <div className="row">
               <Comments />
-              <Tasks newTasks={props.newTasks} />
-              <Orders newOrders={props.newOrders} />
-              <Tickets tickets={props.tickets} />
+              <Tasks />
+              <Orders />
+              <Tickets />
             </div>
             <AreaChart />
             <div className="row">
