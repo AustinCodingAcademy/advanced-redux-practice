@@ -1,16 +1,18 @@
 import React from "react";
 import MessagePreview from "./MessagePreview";
+import { connect } from "react-redux";
 
-function TopNav(props) {
+function TopNav(props){
   return (
     <ul className="nav navbar-right top-nav">
       <li className="dropdown">
         <a href="#" className="dropdown-toggle" data-toggle="dropdown"><i className="fa fa-envelope"></i> <b className="caret"></b></a>
         <ul className="dropdown-menu message-dropdown">
-            {
-                props.messages.map(function(m,i) {
-                  return <MessagePreview key={i} message={m} />;
-                })
+            { 
+                <MessagePreview />
+                // props.messages.map(function(m,i) {
+                //   return <MessagePreview key={i} message={m} />;
+                // })
             }
          
           <li className="message-footer">
@@ -66,4 +68,11 @@ function TopNav(props) {
     </ul>);
 }
 
-export default TopNav;
+function mapStateToProps(state){
+    return {
+        message: state.messages
+    }
+}
+
+const TopNavContainer = connect(mapStateToProps)(TopNav)
+export default TopNavContainer;

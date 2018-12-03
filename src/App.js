@@ -17,7 +17,7 @@ function App(props) {
     <div> 
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <TopNav messages={props.messages} />
+          <TopNav />
           <SideNav />
         </nav>
         <div id="page-wrapper">

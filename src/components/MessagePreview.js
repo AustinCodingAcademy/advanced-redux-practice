@@ -1,5 +1,6 @@
 import React from "react";
 import DateTime from "./DateTime";
+import { connect } from 'react-redux';
 
 function MessagePreview(props) {
   return (    
@@ -20,5 +21,11 @@ function MessagePreview(props) {
     </li>
   );
 }
+function mapStateToProps(state){
+  return{
+    message: state.messages
+  }
+}
+const MessagePreviewContainer = connect(mapStateToProps)(MessagePreview);
+export default MessagePreviewContainer;
 
-export default MessagePreview;

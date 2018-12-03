@@ -21,7 +21,6 @@ ReactDOM.render(
       dateTime={dateTime}
       newTasks={newTasks}
       orders={orders} 
-      messages={messages}
       tasks={tasks}
     />
   </Provider>

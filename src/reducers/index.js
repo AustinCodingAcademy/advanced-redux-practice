@@ -14,6 +14,10 @@ function newOrders(state = 0, action){
 function tickets(state = 0, action){
     return state;
 }
+
+function messages(state = [], action){
+    return state;
+}
 const rootReducer = combineReducers({
  newComments, newTasks, newOrders, tickets
 });
