@@ -29,9 +29,9 @@ function Comments(props) {
 
 function mapStateToProps(state) {
     return {
-        comments: state.newComments
+        newComments: state.newComments
     }
 }
 // connect is a function from react/redux
 // connect(mapStateToProps) returns a function that use CommentsContainer as an argument
-export default connect(mapStateToProps)(CommentsContainer);
+export default connect(mapStateToProps)(Comments);
