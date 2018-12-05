@@ -1,5 +1,4 @@
 export default {
-  tweets: [],
   newComments: 23,
   newTasks: 12,
   newOrders: 124,

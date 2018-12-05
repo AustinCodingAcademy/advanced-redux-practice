@@ -67,7 +67,7 @@ function TopNav(props) {
         </ul>);
 }
 
-function mapStateToProps = function(state) {
+function mapStateToProps(state) {
     return {
         messages: state.messages
     }

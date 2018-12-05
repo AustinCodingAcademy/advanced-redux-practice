@@ -29,6 +29,6 @@ function orders(state = [], action) {
    return state;
 }
 
-export default rootReducer({
+export default combineReducers({
    newComments, newTasks, newOrders, tickets, orders, tasks, messages
 });

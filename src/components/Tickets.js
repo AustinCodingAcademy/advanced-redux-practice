@@ -32,6 +32,6 @@ const mapStateToProps = function (state) {
   };
 };
 
-export default connect(mapStateToProps, null)(Tickets);
+export default connect(mapStateToProps)(Tickets);
 
 
