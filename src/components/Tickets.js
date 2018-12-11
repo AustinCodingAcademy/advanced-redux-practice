@@ -28,7 +28,7 @@ function Tickets(props) {
 }
 const mapStateToProps = function (state) {
   return {
-    tickets: state.tickets
+    tickets: state.newTickets
   };
 };
 export default (Tickets);
