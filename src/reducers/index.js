@@ -7,7 +7,7 @@ function newComments(state, action) {
     return state;
 }
 
-let reducers = Redux.combineReducers({
+let reducers = combineReducers({
     newComments
 })
 
