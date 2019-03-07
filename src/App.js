@@ -14,7 +14,7 @@ import TransactionsPanel from "./components/TransactionsPanel";
 
 function App(props) {
   return (
-    <div> 
+    <div>
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
           <TopNav messages={props.messages} />
@@ -25,7 +25,7 @@ function App(props) {
             <div className="row">
               <div className="col-lg-12">
                 <h1 className="page-header">
-                    Dashboard <small>Statistics Overview</small>
+                  Dashboard <small>Statistics Overview</small>
                 </h1>
                 <ol className="breadcrumb">
                   <li className="active">
@@ -59,13 +59,13 @@ function App(props) {
 }
 
 App.propTypes = {
-  dateTime: PropTypes.string.isRequired,
+  dateTime: PropTypes.string,
   newComments: PropTypes.number.isRequired,
   newTasks: PropTypes.number.isRequired,
   newOrders: PropTypes.number.isRequired,
   tickets: PropTypes.number.isRequired,
   orders: PropTypes.array.isRequired,
-  taskItem: PropTypes.string.isRequired,
+  taskItem: PropTypes.string,
   messages: PropTypes.array,
   tasks: PropTypes.array
 };
