@@ -79,7 +79,13 @@ function messages(state, action) {
   }
 }
 let reducers = combineReducers({
-  newComments
+  newComments,
+  newTasks,
+  newOrders,
+  tickets,
+  orders,
+  tasks,
+  messages
 });
 
 export default reducers;
