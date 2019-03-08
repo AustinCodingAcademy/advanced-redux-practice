@@ -2,7 +2,7 @@ import React from "react";
 import DateTime from "./DateTime";
 
 function MessagePreview(props) {
-  return (    
+  return (
     <li className="message-preview">
       <a href="#">
         <div className="media">

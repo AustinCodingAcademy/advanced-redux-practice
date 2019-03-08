@@ -26,12 +26,11 @@ function Tickets(props) {
       </div>
     </div>);
 }
-const mapStateToProps = function (state) {
+const mapStateToProps = (state) => {
   return {
     tickets: state.tickets
   };
 };
-export default (Tickets);
-// export default connect(mapStateToProps,null)(Tickets);
+export default connect(mapStateToProps,null)(Tickets);
 
 
