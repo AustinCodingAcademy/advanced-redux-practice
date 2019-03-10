@@ -1,4 +1,15 @@
 import React from "react";
+import {connect} from "react-redux";
+
+
+function mapStateToProps(state) {
+    return {
+        newComments: state.newComments
+    }
+}
+export default connect(mapStateToProps)(Comments);
+
+
 
 function Comments(props) {
   return ( 
@@ -25,5 +36,3 @@ function Comments(props) {
       </div>
     </div>);
 }
-
-export default Comments;
