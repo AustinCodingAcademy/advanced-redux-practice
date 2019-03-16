@@ -9,7 +9,6 @@ import Tasks from "./components/Tasks";
 import TasksPanel from "./components/TasksPanel";
 import Tickets from "./components/Tickets";
 import TransactionsPanel from "./components/TransactionsPanel";
-import { connect } from 'react-redux'
 
 
 function App(props) {
@@ -58,14 +57,5 @@ function App(props) {
   );
 }
 
-const mapStateToProps = (state ) => {
-   return {
-     dateTime: state.dateTime,
-     tickets: state.tickets,
-     orders: state.orders,
-     taskItem: state.taskItem,
-     messages: state.messages,
-   }
- }
 
-export default connect(mapStateToProps)(App);
+export default App;
