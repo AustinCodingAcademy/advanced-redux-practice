@@ -6,18 +6,18 @@ If done correctly, the web page should look the same, but no props are passed fr
 fork, clone, npm install, npm start
 
 ### Reducers
-* Create a new folder called reducers
-* Create a file in this folder called index.js
-* Import combineReducers from redux
-* Create a reducer function for each piece of data in state.js
+<!-- * Create a new folder called reducers
+* Create a file in this folder called index.js -->
+<!-- * Import combineReducers from redux -->
+<!-- * Create a reducer function for each piece of data in state.js
   * newComments
   * newTasks
   * newOrders
   * tickets
   * orders
   * tasks
-  * messages
-* Remember 2 parameters state and action. Remember to return state
+  * messages -->
+<!-- * Remember 2 parameters state and action. Remember to return state -->
 * Combine the reducers and export
   
 
