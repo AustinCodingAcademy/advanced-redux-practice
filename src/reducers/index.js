@@ -30,7 +30,7 @@ function tasks(state=[], action) {
     return state;
 }
 
-function messages(state=, action) {
+function messages(state=[], action) {
     
     return state;
 }
