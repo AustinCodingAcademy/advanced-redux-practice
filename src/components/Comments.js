@@ -26,4 +26,12 @@ function Comments(props) {
     </div>);
 }
 
-export default Comments;
+import {connect} from "react-redux";
+
+const mapStateToProps = function (state) {
+  return {
+    newComments: state.newComments
+  };
+};
+
+export default connect(mapStateToProps,null)(Comments);

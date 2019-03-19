@@ -22,4 +22,12 @@ function TasksPanel(props) {
         );
 }
 
-export default TasksPanel;
+import {connect} from "react-redux";
+
+const mapStateToProps = function (state) {
+  return {
+    tasks: state.tasks
+  };
+};
+
+export default connect(mapStateToProps,null)(TasksPanel);

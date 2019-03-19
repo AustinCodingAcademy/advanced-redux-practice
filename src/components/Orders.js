@@ -26,4 +26,12 @@ function Orders(props) {
     </div>);
 }
 
-export default Orders;
+import {connect} from "react-redux";
+
+const mapStateToProps = function (state) {
+  return {
+    newOrders: state.newOrders
+  };
+};
+
+export default connect(mapStateToProps,null)(Orders);

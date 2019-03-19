@@ -66,4 +66,12 @@ function TopNav(props) {
     </ul>);
 }
 
-export default TopNav;
+import {connect} from "react-redux";
+
+const mapStateToProps = function (state) {
+  return {
+    messages: state.messages
+  };
+};
+
+export default connect(mapStateToProps,null)(TopNav);

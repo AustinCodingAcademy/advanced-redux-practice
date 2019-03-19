@@ -35,4 +35,13 @@ function TransactionsPanel(props) {
     </div> );
 }
 
-export default TransactionsPanel;
+
+import {connect} from "react-redux";
+
+const mapStateToProps = function (state) {
+  return {
+    orders: state.orders
+  };
+};
+
+export default connect(mapStateToProps,null)(TransactionsPanel);
