@@ -1,4 +1,4 @@
-## Intro
+# Intro
 When you run npm start the web page that comes up may appear familiar. A dashboard is a common type of user interface used to show a variety of information that is important in making decisions. It is usually read only which is perfect for practicing redux reducers. The data is currently being passed to components through props. Change the code to implement redux and remove any passing of props. What we are trying to accomplish with this project is only valuable to the programmer. The end user will see no change in the interface.
 If done correctly, the web page should look the same, but no props are passed from any component to any other component.
 
