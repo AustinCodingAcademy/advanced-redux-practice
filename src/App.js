@@ -2,13 +2,13 @@ import React from "react";
 import TopNav from "./components/TopNav";
 import PropTypes from "prop-types";
 import AreaChart from "./components/AreaChart";
-import Comments from "./components/Comments";
+import Comments from "./containers/CommentsContainer";
 import DonutChart from "./components/DonutChart";
-import Orders from "./components/Orders";
+import Orders from "./containers/OrdersContainer";
 import SideNav from "./components/SideNav";
-import Tasks from "./components/Tasks";
+import Tasks from "./containers/TasksContainer";
 import TasksPanel from "./components/TasksPanel";
-import Tickets from "./components/Tickets";
+import Tickets from "./containers/TicketsContainers";
 import TransactionsPanel from "./components/TransactionsPanel";
 
 
@@ -35,10 +35,10 @@ function App(props) {
               </div>
             </div>
             <div className="row">
-              <Comments newComments={props.newComments} />
-              <Tasks newTasks={props.newTasks} />
-              <Orders newOrders={props.newOrders} />
-              <Tickets tickets={props.tickets} />
+              <Comments />
+              <Tasks />
+              <Orders />
+              <Tickets />
             </div>
             <AreaChart />
             <div className="row">
