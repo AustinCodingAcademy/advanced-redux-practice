@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 function Tickets(props) {
   return(
     <div className="col-lg-3 col-md-6">
-      <div className="panel panel-red">
+      <div className="panel panel-red">c
         <div className="panel-heading">
           <div className="row">
             <div className="col-xs-3">
