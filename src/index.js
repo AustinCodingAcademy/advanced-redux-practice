@@ -18,18 +18,19 @@ tasks,
 messages
 } = state;
 
-ReactDOM.render(<Provider store={store}>
-  <App 
-    taskItem={taskItem}
-    dateTime={dateTime}
-    newComments={newComments}
-    newTasks={newTasks}
-    newOrders={newOrders}
-    tickets={tickets}
-    orders={orders} 
-    messages={messages}
-    tasks={tasks}
-    />
-    </Provider>,
+ReactDOM.render(
+  <Provider store={store}>
+    <App 
+      taskItem={taskItem}
+      dateTime={dateTime}
+      newComments={newComments}
+      newTasks={newTasks}
+      newOrders={newOrders}
+      tickets={tickets}
+      orders={orders} 
+      messages={messages}
+      tasks={tasks}
+      />
+  </Provider>,
   document.getElementById("root")
 );

@@ -1,10 +1,9 @@
 import React from "react";
-import {connect} from "react-redux";
 
-function Tickets(props) {
+export default function Tickets(props) {
   return(
     <div className="col-lg-3 col-md-6">
-      <div className="panel panel-red">c
+      <div className="panel panel-red">
         <div className="panel-heading">
           <div className="row">
             <div className="col-xs-3">
@@ -26,12 +25,3 @@ function Tickets(props) {
       </div>
     </div>);
 }
-const mapStateToProps = function (state) {
-  return {
-    tickets: state.tickets
-  };
-};
-export default (Tickets);
-// export default connect(mapStateToProps,null)(Tickets);
-
-
