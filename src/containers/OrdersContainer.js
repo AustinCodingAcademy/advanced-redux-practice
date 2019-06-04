@@ -1,9 +1,10 @@
-import {connect} from "react-redux";
-import Orders from '../components/Orders';
+import {connect} from 'react-redux';
+import TransactionsPanel from '../components/TransactionsPanel';
 
-const mapStateToProps = function (state) {
-  return {
-    newOrders: state.newOrders
-  };
+const mapStateToProps = (state) => {
+    return {
+        orders: state.orders
+    };
 };
-export default connect(mapStateToProps,null)(Orders);
+
+export default connect(mapStateToProps, null)(TransactionsPanel);

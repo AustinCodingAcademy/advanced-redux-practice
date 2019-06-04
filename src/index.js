@@ -8,20 +8,14 @@ import store from './store';
 
 const {
 dateTime,
-orders,
 taskItem,
-tasks,
-messages
 } = state;
 
 ReactDOM.render(
   <Provider store={store}>
     <App 
       taskItem={taskItem}
-      dateTime={dateTime}
-      orders={orders} 
-      messages={messages}
-      tasks={tasks}
+      dateTime={dateTime} 
       />
     </Provider>,
   document.getElementById("root")

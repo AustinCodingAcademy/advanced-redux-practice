@@ -1,9 +1,10 @@
-import {connect} from "react-redux";
-import Tasks from '../components/Tasks';
+import {connect} from 'react-redux';
+import TasksPanel from '../components/TasksPanel';
 
-const mapStateToProps = function (state) {
-  return {
-    newTasks: state.newTasks
-  };
+const mapStateToProps = (state) => {
+    return {
+        tasks: state.tasks
+    }
 };
-export default connect(mapStateToProps,null)(Tasks);
+
+export default connect(mapStateToProps, null)(TasksPanel);

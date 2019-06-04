@@ -1,15 +1,15 @@
 import React from "react";
-import TopNav from "./components/TopNav";
+import TopNav from "./containers/MessagesContainer";
 import PropTypes from "prop-types";
 import AreaChart from "./components/AreaChart";
-import Comments from "./containers/CommentsContainer";
+import Comments from "./containers/NewCommentsContainer";
 import DonutChart from "./components/DonutChart";
-import Orders from "./containers/OrdersContainer";
+import Orders from "./containers/NewOrdersContainer";
 import SideNav from "./components/SideNav";
-import Tasks from "./containers/TasksContainer";
-import TasksPanel from "./components/TasksPanel";
+import Tasks from "./containers/NewTasksContainer";
+import TasksPanel from "./containers/TasksContainer";
 import Tickets from "./containers/TicketsContainers";
-import TransactionsPanel from "./components/TransactionsPanel";
+import TransactionsPanel from "./containers/OrdersContainer";
 
 
 function App(props) {
@@ -17,7 +17,7 @@ function App(props) {
     <div> 
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <TopNav messages={props.messages} />
+          <TopNav />
           <SideNav />
         </nav>
         <div id="page-wrapper">
@@ -44,10 +44,10 @@ function App(props) {
             <div className="row">
               <DonutChart />
               <div className="col-lg-4">
-                <TasksPanel tasks={props.tasks} />
+                <TasksPanel />
               </div>
               <div className="col-lg-4">
-                <TransactionsPanel orders={props.orders} />
+                <TransactionsPanel />
               </div>
             </div>
           </div>
