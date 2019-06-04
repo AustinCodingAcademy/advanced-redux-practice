@@ -8,13 +8,11 @@ import store from './store';
 
 const {
 dateTime,
-taskItem,
 } = state;
 
 ReactDOM.render(
   <Provider store={store}>
     <App 
-      taskItem={taskItem}
       dateTime={dateTime} 
       />
     </Provider>,
