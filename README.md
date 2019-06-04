@@ -20,8 +20,6 @@ fork, clone, npm install, npm start
 * Remember 2 parameters state and action. Remember to return state
 * Combine the reducers and export
   
-
-
 ### Create the store
 * Create a store.js file
 * Import createStore from redux
