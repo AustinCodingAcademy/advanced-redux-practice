@@ -1,6 +1,6 @@
 import React from "react";
 
-function Tasks(props) {
+export default function Tasks(props) {
   return ( <div className="col-lg-3 col-md-6">
                         <div className="panel panel-green">
                             <div className="panel-heading">
@@ -25,5 +25,4 @@ function Tasks(props) {
                     </div>);
 }
 
-export default Tasks;
 
