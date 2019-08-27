@@ -1,15 +1,15 @@
 import React from "react";
-import TopNav from "./components/TopNav";
+import TopNav from "./container/topNavContainer";
 import PropTypes from "prop-types";
 import AreaChart from "./components/AreaChart";
-import Comments from "./components/Comments";
+import Comments from "./container/commentsContainer";
 import DonutChart from "./components/DonutChart";
-import Orders from "./components/Orders";
+import Orders from "./container/ordersContainer";
 import SideNav from "./components/SideNav";
-import Tasks from "./components/Tasks";
-import TasksPanel from "./components/TasksPanel";
-import Tickets from "./components/Tickets";
-import TransactionsPanel from "./components/TransactionsPanel";
+import Tasks from "./container/tasksContainer";
+import TasksPanel from "./container/taskPanelContainer";
+import Tickets from "./container/ticketsContainer";
+import TransactionsPanel from "./container/transactionPanelContainer";
 
 
 function App(props) {
@@ -17,7 +17,7 @@ function App(props) {
     <div> 
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <TopNav messages={props.messages} />
+          <TopNav/>
           <SideNav />
         </nav>
         <div id="page-wrapper">
@@ -35,19 +35,19 @@ function App(props) {
               </div>
             </div>
             <div className="row">
-              <Comments newComments={props.newComments} />
+              <Comments />
               <Tasks newTasks={props.newTasks} />
               <Orders newOrders={props.newOrders} />
-              <Tickets tickets={props.tickets} />
+              <Tickets/>
             </div>
             <AreaChart />
             <div className="row">
               <DonutChart />
               <div className="col-lg-4">
-                <TasksPanel tasks={props.tasks} />
+                <TasksPanel/>
               </div>
               <div className="col-lg-4">
-                <TransactionsPanel orders={props.orders} />
+                <TransactionsPanel/>
               </div>
             </div>
           </div>
