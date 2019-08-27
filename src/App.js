@@ -11,12 +11,14 @@ import TasksPanel from "./components/TasksPanel";
 import Tickets from "./components/Tickets";
 import TransactionsPanel from "./components/TransactionsPanel";
 
-
 function App(props) {
   return (
-    <div> 
+    <div>
       <div id="wrapper">
-        <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav
+          className="navbar navbar-inverse navbar-fixed-top"
+          role="navigation"
+        >
           <TopNav messages={props.messages} />
           <SideNav />
         </nav>
@@ -25,7 +27,7 @@ function App(props) {
             <div className="row">
               <div className="col-lg-12">
                 <h1 className="page-header">
-                    Dashboard <small>Statistics Overview</small>
+                  Dashboard <small>Statistics Overview</small>
                 </h1>
                 <ol className="breadcrumb">
                   <li className="active">
@@ -35,7 +37,7 @@ function App(props) {
               </div>
             </div>
             <div className="row">
-              <Comments newComments={props.newComments} />
+              <Comments />
               <Tasks newTasks={props.newTasks} />
               <Orders newOrders={props.newOrders} />
               <Tickets tickets={props.tickets} />
@@ -54,7 +56,6 @@ function App(props) {
         </div>
       </div>
     </div>
-
   );
 }
 
