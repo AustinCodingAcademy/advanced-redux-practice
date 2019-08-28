@@ -1,6 +1,6 @@
 import React from "react";
 
-function Comments(props) {
+export default function Comments(props) {
   return ( 
     <div className="col-lg-3 col-md-6">
       <div className="panel panel-primary">
@@ -25,5 +25,3 @@ function Comments(props) {
       </div>
     </div>);
 }
-
-export default Comments;

@@ -1,8 +1,8 @@
 export default {
-  newComments: 23,
-  newTasks: 12,
-  newOrders: 124,
-  tickets: 13,
+  newComments: 444,
+  newTasks: 333,
+  newOrders: 222,
+  tickets: 111,
   tasks: [{
     id: 1,
     task: "VDI",
