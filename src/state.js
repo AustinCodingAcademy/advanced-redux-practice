@@ -1,11 +1,11 @@
 export default {
-  newComments: 23,
-  newTasks: 12,
-  newOrders: 124,
-  tickets: 13,
+  newComments: 230,
+  newTasks: 1200,
+  newOrders: 1240,
+  tickets: 1300,
   tasks: [{
     id: 1,
-    task: "VDI",
+    task: "TEST TASK",
     date: "11/4/2016"
   }, {
     id: 2,
